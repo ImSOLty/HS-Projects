@@ -1,0 +1,368 @@
+{
+  "level1": {
+    "scenes": {
+      "scene1": {
+        "text": "Once you reach the beginning of the Mount Qaf, you feel amazed by the majestic\nmountain that you will conquer, at the end of this climb. You look at the snowy peaks while\nthinking of how to start the journey. There is a hill before you.",
+        "options": [
+          {
+            "option_text": "Walk around a bit, maybe you'll find something interesting.",
+            "result_text": "In a small cave nearby you found a key.",
+            "actions": [
+              "+key"
+            ],
+            "next": "scene3"
+          },
+          {
+            "option_text": "Walk up the hill and begin climbing.",
+            "result_text": "You go up the mountain, using the {tool}",
+            "actions": [
+              "-{tool}"
+            ],
+            "next": "scene4"
+          },
+          {
+            "option_text": "Enjoy the scenery.",
+            "result_text": "You admired the majestic view of the mountain!",
+            "actions": [],
+            "next": "scene2"
+          }
+        ]
+      },
+      "scene2": {
+        "text": "That view was really astounding! But we can't stand here forever, mesmerized by it",
+        "options": [
+          {
+            "option_text": "Walk around a bit, maybe you'll find something interesting.",
+            "result_text": "In a small cave nearby you found a key.",
+            "actions": [
+              "+key"
+            ],
+            "next": "scene3"
+          },
+          {
+            "option_text": "Walk up the hill and begin climbing.",
+            "result_text": "You go up the mountain, using the {tool}",
+            "actions": [
+              "-{tool}"
+            ],
+            "next": "scene4"
+          }
+        ]
+      },
+      "scene3": {
+        "text": "Suddenly, a large boulder fell behind you and covered the entrance to the cave.\nYou see a closed door with a message in front of you.\nIt says: \"I only open myself to the generous ones!\"",
+        "options": [
+          {
+            "option_text": "Give away the {tool}",
+            "result_text": "You gave away the {tool} and the door swung open",
+            "actions": [
+              "-{tool}"
+            ],
+            "next": "scene6"
+          },
+          {
+            "option_text": "Give away the {snack}",
+            "result_text": "You gave away the {snack} and the door swung open",
+            "actions": [
+              "-{snack}"
+            ],
+            "next": "scene6"
+          }
+        ]
+      },
+      "scene4": {
+        "text": "As you go up the mountain, you see weird plants and flowers coming out of the surface of the mountain.\nSuddenly, you hear a thunder-like growl and feel the breeze of giant wings behind you.\nYou tilt your head up and see a dragon flying towards the top of the mountain.\nYou've heard stories that this, is no ordinary mountain and they seem to be true.\nYou've reached a higher level of the mountain and saw a door with a lock, hanging in the air, unattached.\nYou also saw a path up to the mountain however; there is a human-sized bird in front of it.",
+        "options": [
+          {
+            "option_text": "Walk up to the unattached door. You wonder where it leads, can you trust it?",
+            "result_text": "You tried knocking on the door, but it only opened with ease.",
+            "actions": [],
+            "next": "scene8"
+          },
+          {
+            "option_text": "Examine the strange bird from afar.",
+            "result_text": "The bird has red wings with blue stripes on. It has a long neck.\nInside its beak it has sharp teeth and its eyes are following you, interested.",
+            "actions": [],
+            "next": "scene5"
+          },
+          {
+            "option_text": "Walk towards the path and face the bird.",
+            "result_text": "You take out your {weapon} and attack the bird.\nIt stretches its head to attack you. It's too fast...\nYou've decided to run to the unattached door",
+            "actions": [
+              "-{weapon}",
+              "hit"
+            ],
+            "next": "scene8"
+          }
+        ]
+      },
+      "scene5": {
+        "text": "\"A very unusual bird\" you thought and wondered what to do next.",
+        "options": [
+          {
+            "option_text": "Walk up to the unattached door. You wonder where it leads, can you trust it?",
+            "result_text": "You tried knocking on the door, but it only opened with ease.",
+            "actions": [],
+            "next": "scene8"
+          },
+          {
+            "option_text": "Walk towards the path and face the bird.",
+            "result_text": "You take out your weapon and attack the bird.\nIt stretches its head to attack you. It's too fast...\nYou've tried to run to the unattached door.",
+            "actions": [
+              "-{weapon}",
+              "hit"
+            ],
+            "next": "scene8"
+          }
+        ]
+      },
+      "scene6": {
+        "text": "Behind the door there is a long, lighted by lit torches, staircase leading somewhere upward.\nAs you made your way up it, you heard a low, creaking noise behind you.",
+        "options": [
+          {
+            "option_text": "Turn around to whisper.",
+            "result_text": "Unfortunately, the source of the sound was a large rat that took advantage of your carelessness and bit your leg.\nYou've tried to run further up the staircase.",
+            "actions": [
+              "hit"
+            ],
+            "next": "scene7"
+          },
+          {
+            "option_text": "Run further up the staircase.",
+            "result_text": "You decided to run for your life, and you probably did the right thing.",
+            "actions": [],
+            "next": "scene7"
+          },
+          {
+            "option_text": "Throw a {weapon} behind yourself",
+            "result_text": "When the {weapon} hit the source of the sound, it went silent.\nThat gave you confidence and you've calmly continued your way up.",
+            "actions": [
+              "-{weapon}",
+              "heal"
+            ],
+            "next": "scene7"
+          }
+        ]
+      },
+      "scene7": {
+        "text": "You faced an ordinary door (what a surprise...), a little rotten on all sides.\nThere is a huge barn lock on it.\nYou have absolutely decided that it is not worth going back to that scary sound so you have to get behind it somehow.",
+        "options": [
+          {
+            "option_text": "Open the door with the key you found earlier.",
+            "result_text": "A slight click and the door opened without any problems.",
+            "actions": [
+              "-key"
+            ],
+            "next": "scene8"
+          },
+          {
+            "option_text": "Come on, it's rotten - hit it a couple of times and it'll open for sure.",
+            "result_text": "Well, the door still had to be opened with the key, albeit with little damage... for you. Was it worth it?",
+            "actions": [
+              "-key",
+              "hit"
+            ],
+            "next": "scene8"
+          }
+        ]
+      },
+      "scene8": {
+        "text": "This door was the entrance to a cave. The inside was vast, filled with icicles on the ceiling.\nYou sat down on a rock trying to get warm and all of a sudden you felt as if you weren't alone.\nYou stand still to listen to hear its breathing. Then you hear a big laugh echoing on the surface of the cave.\nDarkness says \"There come many travellers here to conquer this mountain, however very few can pass this point\".\nYou were too scared to answer. The voice continued \"Answer my riddle correctly and I'll let you pass, it's that simple!\nAs small as your thumb, I am light in the air,\nyou may hear me before you see me, but trust that I'm there.\nWhat am I?\"",
+        "options": [
+          {
+            "option_text": "A hummingbird.",
+            "result_text": "The voice says 'Too bad, I thought you were clever! Should I give you another chance?' as it gets closer to you.",
+            "actions": [
+              "hit"
+            ],
+            "next": "scene9"
+          },
+          {
+            "option_text": "A mosquito.",
+            "result_text": "The darkness says 'Wrong! Should I give you another chance?' as it gets closer to you.",
+            "actions": [
+              "hit"
+            ],
+            "next": "scene10"
+          },
+          {
+            "option_text": "A bumblebee.",
+            "result_text": "The darkness says 'Correct! You may pass traveller.'\nYou saw a light coming from the inner cave and you follow it.",
+            "actions": [],
+            "next": "end"
+          }
+        ]
+      },
+      "scene9": {
+        "text": "\"Of course it was the wrong answer, how could I be so wrong?\" you thought.",
+        "options": [
+          {
+            "option_text": "A mosquito.",
+            "result_text": "The darkness says 'Wrong! Again!' as it gets more closer to you. You try shouting out the last option - \"A BUMBLEBEE!\"...",
+            "actions": [
+              "hit"
+            ],
+            "next": "end"
+          },
+          {
+            "option_text": "A bumblebee.",
+            "result_text": "The darkness says 'Okaaaaay... Correct! You may pass traveller.'\nYou saw a light coming from the inner cave and you follow it.",
+            "actions": [],
+            "next": "end"
+          }
+        ]
+      },
+      "scene10": {
+        "text": "\"Of course it was the wrong answer, how could I be so wrong?\" you thought.",
+        "options": [
+          {
+            "option_text": "A hummingbird.",
+            "result_text": "The darkness says 'Too bad! Again!' as it gets more closer to you.\n You try shouting out the last option - \"A BUMBLEBEE!\"...",
+            "actions": [
+              "hit"
+            ],
+            "next": "end"
+          },
+          {
+            "option_text": "A bumblebee.",
+            "result_text": "The darkness says 'Okaaaaay... Correct! You may pass traveller.'\nYou saw a light coming from the inner cave and you follow it.",
+            "actions": [],
+            "next": "end"
+          }
+        ]
+      }
+    },
+    "next": "level2"
+  },
+  "level2": {
+    "scenes": {
+      "scene1": {
+        "text": "You stand before a narrow, treacherous path that winds along the mountain's edge.\nThe wind howls, and the path looks perilous. What will you do?",
+        "options": [
+          {
+            "option_text": "Bravely attempt the treacherous path.",
+            "result_text": "You cautiously step onto the narrow path, your heart pounding as you navigate its twists and turns.\nAfter a tense journey, you emerge on the other side, feeling a sense of accomplishment.",
+            "actions": [],
+            "next": "scene4"
+          },
+          {
+            "option_text": "Search for an alternate route.",
+            "result_text": "You decide that the path is too risky and search for another way.\nAfter some exploration, you find a hidden route that takes you safely around the hazardous path.",
+            "actions": [],
+            "next": "scene2"
+          }
+        ]
+      },
+      "scene2": {
+        "text": "You stumble upon a hidden cave adorned with ancient symbols.\nThere's an aura of mystery surrounding it. What will you do?",
+        "options": [
+          {
+            "option_text": "Enter the cave to explore.",
+            "result_text": "Inside the cave, you discover an old hermit who offers you a cryptic riddle.\nIf you solve it, he promises a reward that will aid you on your journey.",
+            "actions": [],
+            "next": "scene3"
+          },
+          {
+            "option_text": "Continue on your path, avoiding the cave.",
+            "result_text": "You decide not to enter the cave, prioritizing your main goal of reaching the summit.\nAs you move forward, you can't help but wonder about the secrets the cave holds.",
+            "actions": [],
+            "next": "scene4"
+          }
+        ]
+      },
+      "scene3": {
+        "text": "The hermit's riddle echoes in your mind: 'I speak without a mouth and hear without ears.\nI have no body, but I come alive with the wind.' What is your answer?",
+        "options": [
+          {
+            "option_text": "An echo.",
+            "result_text": "The hermit's eyes light up with approval. 'Correct! You have solved my riddle.\nAs a reward, take this enchanted potion for protection.'",
+            "actions": [
+              "+potion"
+            ],
+            "next": "scene4"
+          },
+          {
+            "option_text": "A ghost.",
+            "result_text": "The hermit shakes his head. 'Incorrect, my friend. But fear not, for you can always try again.'\nYou leave the cave with determination.",
+            "actions": [],
+            "next": "scene4"
+          }
+        ]
+      },
+      "scene4": {
+        "text": "You ascend higher, the air getting thinner as you approach the summit.\nThe landscape becomes more rugged and desolate.\nSuddenly, you stumble upon an injured traveler lying on the ground.",
+        "options": [
+          {
+            "option_text": "Offer your assistance and heal the traveler's wounds.",
+            "result_text": "You use your healing skills to tend to the traveler's injuries.\nGrateful, they give you a valuable amulet as a token of their appreciation.",
+            "actions": [
+              "heal",
+              "+amulet"
+            ],
+            "next": "scene5"
+          },
+          {
+            "option_text": "Keep your guard up and cautiously approach the traveler.",
+            "result_text": "You approach the traveler warily, unsure of their intentions.\nThey reveal that they were attacked by a wild creature and are in need of aid.\nWhile feigning concern, you manage to discreetly steal an amulet from them, but you accidentally cut your hand on a hidden blade.",
+            "actions": [
+              "hit",
+              "+amulet"
+            ],
+            "next": "scene5"
+          }
+        ]
+      },
+      "scene5": {
+        "text": "With renewed resolve, you continue your ascent.\nAs you reach the summit, you're greeted by a breathtaking view of the world below.\nBut your journey is not over yet.\nThere, you encounter the legendary Snow Guardian, a mythical creature said to hold the key to unlocking the mountain's greatest secret.",
+        "options": [
+          {
+            "option_text": "Engage the Snow Guardian in conversation.",
+            "result_text": "You approach the Snow Guardian with respect and curiosity.\nIt speaks in a voice as soft as falling snow, revealing ancient wisdom about the mountain and its significance.",
+            "actions": [],
+            "next": "scene6"
+          },
+          {
+            "option_text": "Draw your amulet and prepare to battle.",
+            "result_text": "Unsure of the creature's intentions, you draw your amulet.\nThe Snow Guardian raises an icy hand, stopping you.\n'Violence is not the path to knowledge,' it says.",
+            "actions": [
+              "-amulet"
+            ],
+            "next": "scene6"
+          }
+        ]
+      },
+      "scene6": {
+        "text": "The Snow Guardian poses a final question: 'What is the greatest lesson that this mountain teaches?'\nHow do you respond?",
+        "options": [
+          {
+            "option_text": "The journey is more important than the destination.",
+            "result_text": "The Snow Guardian nods in approval. 'Indeed, young traveler.\nThe true value of this mountain lies in the challenges faced, the growth experienced, and the lessons learned along the way.'",
+            "actions": [],
+            "next": "end"
+          },
+          {
+            "option_text": "Conquering fear is the ultimate achievement.",
+            "result_text": "The Snow Guardian smiles gently.\n'Fear can be a powerful adversary, but remember that growth and understanding are equally significant.'",
+            "actions": [],
+            "next": "end"
+          },
+          {
+            "option_text": "Reaching the summit is the goal worth pursuing.",
+            "result_text": "The Snow Guardian's expression remains serene.\n'While reaching the summit is an accomplishment, the true treasure is the wisdom acquired through the trials.'",
+            "actions": [],
+            "next": "end"
+          }
+        ]
+      }
+    },
+    "next": "level3"
+  },
+  "level3": {
+    "scenes": {
+      "scene1": {
+        "text": "",
+        "options": []
+      }
+    }
+  }
+}
